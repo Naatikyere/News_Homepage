@@ -1,0 +1,320 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --soft-orange:hsl(35, 77%, 62%);
+    --soft-red:hsl(5, 85%, 63%);
+    --offwhite:hsl(36, 100%, 99%);
+    --grayish:hsl(233, 8%, 79%);
+    --dark_gray:hsl(236, 13%, 42%);
+    --verydarkgray:hsl(240, 100%, 5%);
+}
+@font-face {
+    font-family:'wght' ;
+    src: url(./assets/fonts/Inter-VariableFont_slnt\,wght.ttf) format('truetype');
+}
+@font-face {
+    font-family:'Inter-Bold' ;
+    src: url(./assets/fonts/static/Inter-Bold.ttf) format('truetype') ;
+}
+@font-face {
+    font-family:'Inter-ExtraBold' ;
+    src: url(./assets/fonts/static/Inter-ExtraBold.ttf) format('truetype');
+}
+.attribution { font-size: 11px; text-align: center; grid-column: 1 / 4; align-self: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 50%;
+    height: 100vh;
+    min-width: 50%;
+    margin:  auto;
+    justify-content: center;
+    padding: 1.2rem;
+    align-content: center;
+    gap:10px;
+}
+.area{
+    /*background: #09f;*/
+    min-height: 100px;
+    
+}
+/*********** Nav Bar area ******/
+header{
+    grid-column: 1 / 4;
+    display: flex;
+    width: 100%;
+}
+.logo{
+    width: 40px;
+    height: 30px;
+    align-self: center;
+}
+nav{
+    align-self: center;
+    flex: 1;
+    font-family: 'Inter-Bold';
+    font-size: 0.8em;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: end;
+}
+li{
+    margin-right: 0.6em;
+    padding: 0.3em;
+}
+
+/******** END of Nav bar area ******/
+
+/******* Aside Begin ******/
+aside{
+    grid-row: 2 / 5;
+    grid-column: 3 / 4;
+    padding: 1.2em 0.9em;
+    background-color: var(--verydarkgray) !important;
+    font-family: 'Inter-Bold';
+    width: 250px;
+    line-height: 2;
+}
+aside h2{
+    color: var(--soft-orange);
+    font-size: 1.7em;
+    font-weight: 800;
+}
+aside h4{
+    color: var(--offwhite);
+    font-size: 0.9em;
+    margin-top:1.7em ;
+}
+aside p{
+    color: var(--grayish);
+    font-family: 'wght';
+    font-size: 0.7em;
+    opacity: 60%;
+}
+/******* Aside END ******/
+
+.picture_area{
+    grid-column: 1 / 3;
+    background-image: url(./assets/images/image-web-3-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 150px;
+    
+}
+.big_text{
+    grid-column: 1 /2;
+    grid-row: 3 / 5;
+    font-size: 2.5rem;
+    padding: 0.5em;
+    font-family: 'Inter-Bold';
+    line-height: 1.4;
+    font-weight: 700;
+    width: 250px;
+    max-height: 200px;
+    color: var(--verydarkgray);
+    background:none ;
+}
+
+/******* Area with button ****/
+.text_w_btn{
+    grid-column:2 / 3;
+    grid-row: 3 / 5;
+    padding: 0 0.7em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    color: var(--verydarkgray);
+    width: 250px;
+    max-height: 200px;
+
+}
+.text_w_btn p{
+    flex: 1; 
+    padding-top: 2.2em; 
+    font-family: 'wght';
+    font-size: 0.6em;
+    line-height: 1.8;
+    line-break: normal;
+    opacity: 80%;
+
+}
+button{
+    color: var(--offwhite);
+    padding: 1em;
+    font-size: 0.8em;
+    font-family: 'wght';
+    font-weight: 700;
+    width: 70%;
+    background-color: var(--soft-red);
+    margin: 20px 0;
+    justify-content:left;
+    align-self: self-start;
+    border: none;
+}
+/****** End *****/
+
+/****** Last Section *****/
+.area div:nth-of-type(2){
+    margin-left:0.5em ;
+}
+
+.area:nth-last-child(3){
+    grid-column: 3 / 4;
+    display: flex;
+    
+}
+.area1{
+    display: flex;
+}
+
+.area:nth-last-child(2){
+    grid-column: 2 / 3;
+    
+}
+.area3{
+    display: flex;
+}
+.area2{
+    display: flex;
+}
+.area:nth-last-child(1){
+    grid-row: 5 / 7;
+    display: flex;
+}
+
+.gray{
+    color: var(--grayish);
+    font-family: 'Inter-Bold';
+    margin-bottom: 0.5em;
+}
+.gray_dark{
+    color: var(--verydarkgray);
+    font-family: 'wght';
+    font-weight: 700;
+    font-size: 0.8em;
+    text-wrap: nowrap;
+    margin-bottom: 0.5em;
+
+}
+.grayish{
+    color: var(--grayish);
+    line-height: 1;
+}
+/***** End ****/
+
+/******** Buger and mobile case *****/
+.mobile-screen{
+    display: none;
+    position: relative;
+}
+.burger{
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 70%;
+    margin-left: 10px;
+    line-height: 30px;
+}
+.burger-screen-btn{
+    background-color: var(--offwhite);
+    width: 300px;
+    height: 88vh;
+    z-index: 10000;
+    padding: 0.6em;
+    position: absolute;
+    display: none;
+    left: 20%;
+    top: 0;
+}
+.screen-btn ul{
+    display: flex;
+    flex-direction: column; 
+    list-style-type: none;
+    font-family: 'Inter-Bold';
+    font-size: 1.3em;
+    margin-top: 85px;
+
+}
+
+.burger-screen-btn div:nth-of-type(1){
+    height: 40px;
+    width: 40px;
+    top: 6px;
+    left: 70%;
+    position: relative;
+}
+
+
+
+/***** END *****/
+
+
+/****** Mobile Interface ****/
+
+@media screen and (max-width:450px) {
+    body{
+        grid-template-columns: 1fr;
+        min-width: 100%;
+        justify-content: unset;
+        padding: 0;
+        height: auto;
+    }
+    header{
+        margin-top: 0.3em;
+        justify-content: normal;
+        grid-column: 1;
+    }
+    .picture_area{
+        grid-column: 1;
+        max-width: 380px;
+        min-height: 300px;
+        background-image: url(assets/images/image-web-3-mobile.jpg) !important;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .logo{
+        margin-left: 0.3em;
+        width: 30px;
+        height: 20px;
+    }
+    nav{
+        display: none;
+    }
+    .big_text{
+        min-width: 330px;
+        grid-column: 1;
+        font-weight: 900;
+        padding: 0;
+    }
+    .text_w_btn{
+        grid-column: 1;
+        justify-content: initial;
+        width: 100%;
+        grid-row: inherit;
+    }
+    aside{
+        grid-column: 1;
+        grid-row: unset;
+        width: 100%;
+    }
+    .area{
+        grid-column: 1 !important;
+        margin-left: 0.4em;
+        width: 85%;
+    }
+
+    /****** Burger ****/
+    .burger{
+        display: block;
+    }
+}
